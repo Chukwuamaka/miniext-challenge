@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
-import DisplayData from '../components/Card';
+import Card from '../components/Card';
 import Login from '../components/Login';
 import styles from '../styles/Home.module.css';
 import { actions } from '../redux/state-slice';
@@ -53,7 +53,7 @@ export default function Home() {
                   </p>
                   {
                     Object.entries(data).map((item) => (
-                      <DisplayData key={item[0]} data={item[1]} />
+                      <Card key={item[0]} data={item[1]} />
                     ))
                   }
                 </>
